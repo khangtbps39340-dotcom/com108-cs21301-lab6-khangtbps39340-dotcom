@@ -1,5 +1,5 @@
 /******************************************************************************
- * Họ và tên: [ĐIỀN TÊN TẠI ĐÂY]
+ * Họ và tên: Trần Bảo Khang
  * MSSV:      [ĐIỀN MSSV TẠI ĐÂY]
  * Lớp:       [ĐIỀN LỚP TẠI ĐÂY]
  *****************************************************************************/
@@ -9,5 +9,34 @@
 //  Output: Xuất ra màn hình kết quả của trung bình tổng các số chia hết cho 3 trong mảng 
 
 
-// VIẾT CODE Ở ĐÂY
+#include <stdio.h>
+
+int main() {
+
+    int n, i;
+    int a[100];
+    int tong = 0;
+    int dem = 0;
+    float tb;
+
+    printf("Nhap n: ");
+    scanf("%d", &n);
+
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+
+    for(i=0;i<n;i++){
+        if(a[i] % 3 == 0){
+            tong = tong + a[i];
+            dem++;
+        }
+    }
+
+    tb = (float)tong / dem;
+
+    printf("TB = %.2f", tb);
+
+    return 0;
+}
 
